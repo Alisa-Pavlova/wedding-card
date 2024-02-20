@@ -11,7 +11,7 @@ function code(name) {
     result.push(code);
   }
 
-  console.log(window.location.origin + '/official?s=' + result.join('$') + '\n' +  window.location.origin + '/friends?s=' + result.join('$'))
+  console.log(window.location.origin + '?official=' + result.join('$') + '\n' +  window.location.origin + '?friends=' + result.join('$'))
 }
 
 function decode(codedName) {
@@ -731,8 +731,8 @@ window.addEventListener('touchend', e => {
     setSend(true)
   };
 
-  const isOfficial = window.location.pathname === '/official'
-  const isForFriends = window.location.pathname === '/friends'
+  const isOfficial = search.split('=')[0] === '?official'
+  const isForFriends = search.split('=')[0] === '?friends'
 
   if (!isOfficial && !isForFriends) {
     return <canvas className="main"/>
