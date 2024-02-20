@@ -746,7 +746,7 @@ window.addEventListener('touchend', e => {
         <span style={{fontSize: '2rem'}}>
         {guestsNames}</span>
         <br />
-        Мы рады пригласить {guestsNames.split(' ').length > 1 ? 'вас' : 'тебя'} на нашу свадьбу, которую будем отмечать {isOfficial ? 'в ресторане True Crab' : 'в Depo-Loft'}
+        Мы рады пригласить {hookContent.split(' ').length > 1 ? 'вас' : 'тебя'} на нашу свадьбу, которую будем отмечать {isOfficial ? 'в ресторане True Crab' : 'в Depo-Loft'}
         <br />
         Адрес: {isOfficial ? 'Ропшинская 30' : 'Гончарная улица 14'}
         <br />
