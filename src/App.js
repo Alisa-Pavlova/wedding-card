@@ -130,7 +130,7 @@ function supportRenderTextureFormat(gl, internalFormat, format, type) {
   gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, texture, 0);
 
   const status = gl.checkFramebufferStatus(gl.FRAMEBUFFER);
-  if (status != gl.FRAMEBUFFER_COMPLETE)
+  if (status !== gl.FRAMEBUFFER_COMPLETE)
   return false;
   return true;
 }
@@ -638,7 +638,7 @@ function multipleSplats(amount) {
 }
 
 function resizeCanvas() {
-  if (canvas.width != canvas.clientWidth || canvas.height != canvas.clientHeight) {
+  if (canvas.width !== canvas.clientWidth || canvas.height !== canvas.clientHeight) {
     canvas.width = canvas.clientWidth;
     canvas.height = canvas.clientHeight;
     initFramebuffers();
@@ -694,7 +694,7 @@ window.addEventListener('touchend', e => {
   const touches = e.changedTouches;
   for (let i = 0; i < touches.length; i++)
   for (let j = 0; j < pointers.length; j++)
-  if (touches[i].identifier == pointers[j].id)
+  if (touches[i].identifier === pointers[j].id)
   pointers[j].down = false;
 });
   }
