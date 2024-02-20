@@ -758,7 +758,7 @@ window.addEventListener('touchend', e => {
       </div>
 
     <button className={`approve ${send ? 'anim' : 'active'}`} onClick={handleApprove}>
-      {send ? 'Будем ждать!' : 'Подвердить свое присутствие!'}
+      {send ? 'Будем ждать!' : 'Подтвердить свое присутствие!'}
      </button> 
 
     </div>
